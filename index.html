@@ -48,10 +48,6 @@
       background-color: #0000cc;
     }
 
-    .question {
-      margin-top: 1rem;
-    }
-
     .nav-buttons {
       margin-top: 1.5rem;
     }
@@ -64,8 +60,8 @@
     <button id="startBtn">Begin</button>
   </div>
 
-  <!-- Load scripts at the end in the correct order -->
+  <!-- Order matters: questions first, then script -->
   <script src="questions.js"></script>
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
