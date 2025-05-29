@@ -1,41 +1,50 @@
-const questions = [
-  {
-    id: 1,
-    question_en: "What is the supreme law of the land?",
-    question_twi: "Dɛn ne mmara titiriw a ɛwɔ asase so?",
-    answer_en: "The Constitution"
-  },
-  {
-    id: 2,
-    question_en: "What does the Constitution do?",
-    question_twi: "Dɛn na Mmara Kɛse no yɛ?",
-    answer_en: "Sets up the government"
-  },
-  {
-    id: 3,
-    question_en: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-    question_twi: "Nkwam a yɛn ho yɛ yɛn dea no wɔ mmara no mfiase nsɛm mmiɛnsa no mu. Dɛn ne nsɛm no?",
-    answer_en: "We the People"
-  }
-];
-
 let currentIndex = 0;
 
-function displayQuestion(index) {
-  document.getElementById("question-en").textContent = questions[index].question_en;
-  document.getElementById("question-twi").textContent = questions[index].question_twi;
-  document.getElementById("answer-en").textContent = questions[index].answer_en;
+function startQuiz() {
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = questions[currentIndex];
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <h1>Question ${q.id}</h1>
+    <p><strong>English:</strong> ${q.question_en}</p>
+    <p><strong>Twi:</strong> ${q.question_twi}</p>
+    <button onclick="showAnswer()">Show Answer</button>
+  `;
+}
+
+function showAnswer() {
+  const q = questions[currentIndex];
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <h1>Question ${q.id}</h1>
+    <p><strong>English:</strong> ${q.question_en}</p>
+    <p><strong>Twi:</strong> ${q.question_twi}</p>
+    <p><strong>Answer:</strong> ${q.answer_en}</p>
+    <div class="nav-buttons">
+      <button onclick="prevQuestion()" ${currentIndex === 0 ? "disabled" : ""}>Previous</button>
+      <button onclick="nextQuestion()">${currentIndex < questions.length - 1 ? "Next" : "Finish"}</button>
+    </div>
+  `;
 }
 
 function nextQuestion() {
-  currentIndex = (currentIndex + 1) % questions.length;
-  displayQuestion(currentIndex);
+  if (currentIndex < questions.length - 1) {
+    currentIndex++;
+    showQuestion();
+  } else {
+    document.getElementById('app').innerHTML = `
+      <h1>You've completed the quiz!</h1>
+      <button onclick="location.reload()">Start Over</button>
+    `;
+  }
 }
 
 function prevQuestion() {
-  currentIndex = (currentIndex - 1 + questions.length) % questions.length;
-  displayQuestion(currentIndex);
+  if (currentIndex > 0) {
+    currentIndex--;
+    showQuestion();
+  }
 }
-
-// Show the first question when page loads
-window.onload = () => displayQuestion(currentIndex);
