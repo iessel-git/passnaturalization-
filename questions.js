@@ -1,4 +1,4 @@
- const questions = [
+const questions = [
   {
     id: 1,
     question_en: "What is the supreme law of the land?",
@@ -118,7 +118,7 @@
     question_en: "Who is one of your state’s U.S. Senators now?",
     question_twi: "Hena na ɔyɛ U.S. Senator fi w’asase so seesei?",
     answer_en: "Answers will vary. [Residents of the District of Columbia and U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.]",
-  }
+  },
   // Append to your existing questions array
 
 //questions.push(
@@ -241,7 +241,7 @@
     question_en: "Who is the Chief Justice of the United States now?",
     question_twi: "Hena na ɔyɛ Chief Justice wɔ United States seesei?",
     answer_en: "John Roberts (as of 2024)"
-  }
+  },
 // Append to your existing questions array
 
 //questions.push(
@@ -364,7 +364,7 @@
     question_en: "What group of people was taken to America and sold as slaves?",
     question_twi: "Mmarima ne mmea bɛn na wɔde kɔɔ America na wɔtɔn wɔn sɛ nkoa?",
     answer_en: "Africans"
-  }
+  },
 // Continue appending to your questions array
 
 //questions.push(
@@ -487,7 +487,7 @@
     question_en: "Who was President during the Great Depression and World War II?",
     question_twi: "Hena na ɔyɛɛ President bere a Great Depression ne World War II rekɔ so?",
     answer_en: "Franklin Roosevelt"
-  }
+  },
 // Continue appending to your questions array
 
 //questions.push(
