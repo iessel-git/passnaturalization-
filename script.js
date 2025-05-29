@@ -15,6 +15,7 @@ function showQuestion() {
   const q = questions[currentIndex];
   const app = document.getElementById('app');
   app.innerHTML = `
+  <img src="images/logo.jpg" alt="Logo" style="max-width: 100px; margin-bottom: 1rem;" />
     <h1>Question ${q.id}</h1>
     <p><strong>English:</strong> ${q.question_en}</p>
     <p><strong>Twi:</strong> ${q.question_twi}</p>
@@ -26,6 +27,7 @@ function showAnswer() {
   const q = questions[currentIndex];
   const app = document.getElementById('app');
   app.innerHTML = `
+  <img src="images/logo.jpg" alt="Logo" style="max-width: 100px; margin-bottom: 1rem;" />
     <h1>Question ${q.id}</h1>
     <p><strong>English:</strong> ${q.question_en}</p>
     <p><strong>Twi:</strong> ${q.question_twi}</p>
