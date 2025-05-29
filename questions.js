@@ -121,7 +121,7 @@
   }
   // Append to your existing questions array
 
-questions.push(
+//questions.push(
   {
     id: 21,
     question_en: "The House of Representatives has how many voting members?",
@@ -244,7 +244,7 @@ questions.push(
   }
 // Append to your existing questions array
 
-questions.push(
+//questions.push(
   {
     id: 41,
     question_en: "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
@@ -367,7 +367,7 @@ questions.push(
   }
 // Continue appending to your questions array
 
-questions.push(
+//questions.push(
   {
     id: 61,
     question_en: "Why did the colonists fight the British?",
@@ -490,7 +490,7 @@ questions.push(
   }
 // Continue appending to your questions array
 
-questions.push(
+//questions.push(
   {
     id: 81,
     question_en: "Who did the United States fight in World War II?",
