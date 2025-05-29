@@ -1,4 +1,4 @@
-export const questions = [
+ const questions = [
   {
     id: 1,
     question_en: "What is the supreme law of the land?",
