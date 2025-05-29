@@ -23,6 +23,8 @@
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
     }
 
     h1 {
@@ -44,13 +46,74 @@
     button:hover {
       background-color: #0000cc;
     }
+
+    .question {
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="app">
     <h1>Welcome to Pass Naturalization</h1>
     <p>Start preparing for the U.S. Civics Test!</p>
-    <button onclick="alert('Let’s get started!')">Begin</button>
+    <button onclick="startQuiz()">Begin</button>
   </div>
+
+  <script>
+    const questions = [
+      {
+        id: 1,
+        question_en: "What is the supreme law of the land?",
+        question_twi: "Dɛn ne mmara titiriw a ɛwɔ asase so?",
+        answer_en: "The Constitution"
+      },
+      {
+        id: 2,
+        question_en: "What does the Constitution do?",
+        question_twi: "Dɛn na Mmara no yɛ?",
+        answer_en: "Sets up the government"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function startQuiz() {
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = questions[currentIndex];
+      const app = document.getElementById('app');
+      app.innerHTML = `
+        <h1>Question ${q.id}</h1>
+        <p><strong>English:</strong> ${q.question_en}</p>
+        <p><strong>Twi:</strong> ${q.question_twi}</p>
+        <button onclick="showAnswer()">Show Answer</button>
+      `;
+    }
+
+    function showAnswer() {
+      const q = questions[currentIndex];
+      const app = document.getElementById('app');
+      app.innerHTML += `
+        <div class="question">
+          <p><strong>Answer:</strong> ${q.answer_en}</p>
+          <button onclick="nextQuestion()">Next Question</button>
+        </div>
+      `;
+    }
+
+    function nextQuestion() {
+      currentIndex++;
+      if (currentIndex < questions.length) {
+        showQuestion();
+      } else {
+        document.getElementById('app').innerHTML = `
+          <h1>You've completed the quiz!</h1>
+          <button onclick="location.reload()">Start Over</button>
+        `;
+      }
+    }
+  </script>
 </body>
 </html>
