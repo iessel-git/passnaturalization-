@@ -1,11 +1,11 @@
-let currentIndex = 0;
-
 document.addEventListener("DOMContentLoaded", () => {
   const startBtn = document.getElementById("startBtn");
   if (startBtn) {
     startBtn.addEventListener("click", startQuiz);
   }
 });
+
+let currentIndex = 0;
 
 function startQuiz() {
   showQuestion();
