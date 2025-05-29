@@ -1,9 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #003366, #ffffff);
   margin: 0;
   padding: 20px;
   text-align: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -12,7 +13,13 @@ body {
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #003366;
+}
+
+h1 {
+  color: #003366;
+  margin-bottom: 20px;
 }
 
 #card {
@@ -22,10 +29,11 @@ body {
 .question-en {
   font-weight: bold;
   font-size: 1.2em;
+  color: #003366;
 }
 
 .question-twi {
-  color: #555;
+  color: #333;
   margin: 10px 0;
 }
 
@@ -36,15 +44,16 @@ body {
 
 .nav-buttons button {
   margin: 5px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
-  background-color: dodgerblue;
+  border-radius: 6px;
+  background-color: #003366;
   color: white;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .nav-buttons button:hover {
-  background-color: #0b79d0;
+  background-color: #0055aa;
 }
