@@ -2,23 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PassNaturalization</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pass Naturalization</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1aff 50%, #ffffff 50%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #000;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1a1aff;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #1a1aff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0000cc;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1>U.S. Naturalization Test - Flashcards</h1>
-    <div id="card">
-      <p class="question-en" id="question-en"></p>
-      <p class="question-twi" id="question-twi"></p>
-      <p class="answer-en" id="answer-en"></p>
-    </div>
-    <div class="nav-buttons">
-      <button onclick="prevQuestion()">Previous</button>
-      <button onclick="nextQuestion()">Next</button>
-    </div>
+    <h1>Welcome to Pass Naturalization</h1>
+    <p>Start preparing for the U.S. Civics Test!</p>
+    <button onclick="alert('Let’s get started!')">Begin</button>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
