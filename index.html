@@ -64,79 +64,8 @@
     <button onclick="startQuiz()">Begin</button>
   </div>
 
-  <script>
-    const questions = [
-      {
-        id: 1,
-        question_en: "What is the supreme law of the land?",
-        question_twi: "Dɛn ne mmara titiriw a ɛwɔ asase so?",
-        answer_en: "The Constitution"
-      },
-      {
-        id: 2,
-        question_en: "What does the Constitution do?",
-        question_twi: "Dɛn na Mmara no yɛ?",
-        answer_en: "Sets up the government"
-      },
-      {
-        id: 3,
-        question_en: "The idea of self-government is in the first three words of the Constitution. What are these words?",
-        question_twi: "Nkabom a yɛde yɛn ho yɛ yɛn ankasa na ɛwɔ mmara no mfiase nsɛm abiɛsa no mu. Nsɛm abiɛsa no yɛ dɛn?",
-        answer_en: "We the People"
-      }
-    ];
-
-    let currentIndex = 0;
-
-    function startQuiz() {
-      showQuestion();
-    }
-
-    function showQuestion() {
-      const q = questions[currentIndex];
-      const app = document.getElementById('app');
-      app.innerHTML = `
-        <h1>Question ${q.id}</h1>
-        <p><strong>English:</strong> ${q.question_en}</p>
-        <p><strong>Twi:</strong> ${q.question_twi}</p>
-        <button onclick="showAnswer()">Show Answer</button>
-      `;
-    }
-
-    function showAnswer() {
-      const q = questions[currentIndex];
-      const app = document.getElementById('app');
-      app.innerHTML = `
-        <h1>Question ${q.id}</h1>
-        <p><strong>English:</strong> ${q.question_en}</p>
-        <p><strong>Twi:</strong> ${q.question_twi}</p>
-        <p><strong>Answer:</strong> ${q.answer_en}</p>
-        <div class="nav-buttons">
-          <button onclick="prevQuestion()" ${currentIndex === 0 ? "disabled" : ""}>Previous</button>
-          <button onclick="nextQuestion()">${currentIndex < questions.length - 1 ? "Next" : "Finish"}</button>
-        </div>
-      `;
-    }
-
-    function nextQuestion() {
-      if (currentIndex < questions.length - 1) {
-        currentIndex++;
-        showQuestion();
-      } else {
-        document.getElementById('app').innerHTML = `
-          <h1>You've completed the quiz!</h1>
-          <button onclick="location.reload()">Start Over</button>
-        `;
-      }
-    }
-
-    function prevQuestion() {
-      if (currentIndex > 0) {
-        currentIndex--;
-        showQuestion();
-      }
-    }
+  <!-- Load external scripts at the end of the body -->
   <script src="questions.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
