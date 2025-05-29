@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#card {
+  margin-bottom: 20px;
+}
+
+.question-en {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.question-twi {
+  color: #555;
+  margin: 10px 0;
+}
+
+.answer-en {
+  color: green;
+  font-style: italic;
+}
+
+.nav-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: #0b79d0;
+}
