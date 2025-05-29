@@ -61,11 +61,11 @@
   <div class="container" id="app">
     <h1>Welcome to Pass Naturalization</h1>
     <p>Start preparing for the U.S. Civics Test!</p>
-    <button onclick="startQuiz()">Begin</button>
+    <button id="startBtn">Begin</button>
   </div>
 
-  <!-- Load external scripts at the end of the body -->
+  <!-- Load scripts at the end in the correct order -->
   <script src="questions.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
