@@ -47,13 +47,36 @@ h1 {
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+  width: 100%;
+}
+
+.nav-buttons button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+  background-color: #0055aa;
 }
 
 /* On screens wider than 480px, arrange buttons side by side */
 @media (min-width: 480px) {
   .nav-buttons {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
   }
+
+  .nav-buttons button {
+    width: 48%;
+  }
+}
+
 }
