@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a1aff 50%, #ffffff 50%);
+      background: linear-gradient(135deg, #1a1aff 33%, #ffffff 34% 66%, #ff1a1a 67%);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -19,18 +19,23 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       width: 90%;
       max-width: 600px;
+      border: 2px solid #ff1a1a;
     }
 
     h1 {
       font-size: 2rem;
       color: #1a1aff;
       margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
     }
 
     button {
@@ -42,10 +47,11 @@
       border-radius: 0.5rem;
       cursor: pointer;
       margin: 0.5rem;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: #0000cc;
+      background-color: #ff1a1a;
     }
 
     .nav-buttons {
