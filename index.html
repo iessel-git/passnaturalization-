@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pass Naturalization</title>
   <style>
+    :root {
+      --primary: #1a1aff;
+      --danger: #ff1a1a;
+      --light: #ffffff;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a1aff 33%, #ffffff 34% 66%, #ff1a1a 67%);
+      background: linear-gradient(135deg, var(--primary) 33%, var(--light) 34% 66%, var(--danger) 67%);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -20,54 +26,65 @@
 
     .container {
       background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       width: 90%;
-      max-width: 600px;
-      border: 2px solid #ff1a1a;
+      max-width: 400px;
+      border: 2px solid var(--danger);
     }
 
-    h1 {
-      font-size: 2rem;
-      color: #1a1aff;
+    img {
+      width: 64px;
+      height: auto;
+      border-radius: 50%;
       margin-bottom: 1rem;
     }
 
+    h1 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
     p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
     }
 
     button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background-color: #1a1aff;
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      background-color: var(--primary);
       color: white;
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
-      margin: 0.5rem;
       transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: #ff1a1a;
+      background-color: var(--danger);
     }
 
-    .nav-buttons {
-      margin-top: 1.5rem;
+    @media (min-width: 480px) {
+      button {
+        width: auto;
+        padding: 0.75rem 2rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container" id="app">
-    <img src="images/logo.jpg" alt="App Logo" width="80" />l
+    <img src="images/logo.jpg" alt="App Logo" />
     <h1>Welcome to Pass Naturalization</h1>
     <p>Start preparing for the U.S. Civics Test!</p>
     <button id="startBtn">Begin</button>
   </div>
 
-  <!-- Important: scripts placed before closing body tag -->
+  <!-- Scripts -->
   <script src="./questions.js"></script>
   <script src="./script.js" defer></script>
 </body>
