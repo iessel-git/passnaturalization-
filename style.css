@@ -44,16 +44,13 @@ h1 {
 
 .nav-buttons {
   display: flex;
-  flex-wrap: wrap; /* ensures wrapping if needed */
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
+  flex-direction: column;
   margin-top: 20px;
   width: 100%;
 }
 
 .nav-buttons button {
-  flex: 1 1 100%; /* full width on small screens */
+  width: 100%;
   padding: 12px;
   font-size: 16px;
   border: none;
@@ -62,13 +59,30 @@ h1 {
   color: white;
   cursor: pointer;
   transition: background 0.3s;
+  margin-bottom: 10px; /* Mobile spacing between stacked buttons */
 }
 
-/* On wider screens, align buttons side by side with fixed width */
+.nav-buttons button:hover {
+  background-color: #0055aa;
+}
+
+.nav-buttons button:last-child {
+  margin-bottom: 0; /* Prevents extra space after last button */
+}
+
+/* On screens wider than 480px: place buttons side by side with spacing */
 @media (min-width: 480px) {
+  .nav-buttons {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
   .nav-buttons button {
-    flex: 0 0 48%;
+    width: 48%;
+    margin-bottom: 0; /* Remove vertical spacing when side by side */
   }
 }
+
 
 }
