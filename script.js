@@ -94,9 +94,10 @@ function showAnswer() {
     <p><strong>Twi:</strong> ${q.question_twi}</p>
     <p><strong>Answer:</strong> ${q.answer_en}</p>
     <div class="nav-buttons">
-      ${isFirst ? '' : `<button onclick="prevQuestion()">Previous</button>`}
-      <button onclick="nextQuestion()">${isLast ? "Finish" : "Next"}</button>
-    </div>
+  <button onclick="prevQuestion()" ${currentIndex === 0 ? "disabled" : ""}>Previous</button>
+  <button onclick="nextQuestion()">${currentIndex < questions.length - 1 ? "Next" : "Finish"}</button>
+</div>
+
   `;
 }
 
