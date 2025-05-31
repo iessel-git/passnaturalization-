@@ -97,10 +97,8 @@ function showAnswer() {
       ${isFirst ? '' : `<button onclick="prevQuestion()">Previous</button>`}
       <button onclick="nextQuestion()">${isLast ? "Finish" : "Next"}</button>
     </div>
-
   `;
 }
-
 
 function nextQuestion() {
   if (currentIndex < questions.length - 1) {
