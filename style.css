@@ -44,14 +44,16 @@ h1 {
 
 .nav-buttons {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* ensures wrapping if needed */
+  flex-direction: row;
+  justify-content: space-between;
   gap: 10px;
   margin-top: 20px;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .nav-buttons button {
-  flex: 1;
+  flex: 1 1 100%; /* full width on small screens */
   padding: 12px;
   font-size: 16px;
   border: none;
@@ -62,20 +64,10 @@ h1 {
   transition: background 0.3s;
 }
 
-.nav-buttons button:hover {
-  background-color: #0055aa;
-}
-
-/* On screens wider than 480px, arrange buttons side by side */
+/* On wider screens, align buttons side by side with fixed width */
 @media (min-width: 480px) {
-  .nav-buttons {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
   .nav-buttons button {
-    width: 48%;
+    flex: 0 0 48%;
   }
 }
 
