@@ -69,6 +69,8 @@ h1 {
 .nav-buttons button:last-child {
   margin-bottom: 0; /* Prevents extra space after last button */
 }
+
+/* === FADE TRANSITIONS === */
 .fade-enter {
   opacity: 0;
   transform: translateY(10px);
@@ -79,6 +81,7 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* On screens wider than 480px: place buttons side by side with spacing */
 @media (min-width: 480px) {
   .nav-buttons {
@@ -91,7 +94,4 @@ h1 {
     width: 48%;
     margin-bottom: 0; /* Remove vertical spacing when side by side */
   }
-}
-
-
 }
