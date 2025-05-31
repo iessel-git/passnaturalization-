@@ -92,6 +92,7 @@ function showQuestion() {
     <p><strong>Twi:</strong> ${q.question_twi}</p>
     <button onclick="showAnswer()">Show Answer</button>
   `;
+   fadeIn(app, html);
 }
 
 function showAnswer() {
@@ -113,6 +114,7 @@ function showAnswer() {
       <button onclick="nextQuestion()">${isLast ? "Finish" : "Next"}</button>
     </div>
   `;
+   fadeIn(app, html);
 }
 
 function nextQuestion() {
