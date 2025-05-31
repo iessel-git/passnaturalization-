@@ -83,17 +83,23 @@ function showAnswer() {
   saveProgress();
   const q = questions[currentIndex];
   const app = document.getElementById('app');
+
+  // Dynamically determine if it's the first or last question
+  const isFirst = currentIndex === 0;
+  const isLast = currentIndex === questions.length - 1;
+
   app.innerHTML = `
     ${commonHeader(q)}
     <p><strong>English:</strong> ${q.question_en}</p>
     <p><strong>Twi:</strong> ${q.question_twi}</p>
     <p><strong>Answer:</strong> ${q.answer_en}</p>
     <div class="nav-buttons">
-      <button onclick="prevQuestion()" ${currentIndex === 0 ? "disabled" : ""}>Previous</button>
-      <button onclick="nextQuestion()">${currentIndex < questions.length - 1 ? "Next" : "Finish"}</button>
+      ${isFirst ? '' : `<button onclick="prevQuestion()">Previous</button>`}
+      <button onclick="nextQuestion()">${isLast ? "Finish" : "Next"}</button>
     </div>
   `;
 }
+
 
 function nextQuestion() {
   if (currentIndex < questions.length - 1) {
