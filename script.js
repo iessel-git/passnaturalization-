@@ -146,3 +146,16 @@ function restartQuiz() {
   localStorage.removeItem("progressIndex");
   showQuestion();
 }
+/* ...your existing styles... */
+
+/* === FADE TRANSITIONS FOR QUESTIONS === */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
