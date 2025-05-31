@@ -21,7 +21,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let currentIndex = 0;
 let sessionStartIndex = 0;
+// Smooth fade-in transition
+function fadeIn(element, htmlContent) {
+  element.classList.remove("fade-enter-active");
+  element.classList.add("fade-enter");
+  element.innerHTML = htmlContent;
 
+  requestAnimationFrame(() => {
+    element.classList.add("fade-enter-active");
+  });
+
+  // Remove the animation class after it completes
+  setTimeout(() => {
+    element.classList.remove("fade-enter");
+    element.classList.remove("fade-enter-active");
+  }, 400);
+}
 function startQuiz() {
   localStorage.setItem("lastVisit", new Date().toLocaleString());
   sessionStartIndex = currentIndex;
